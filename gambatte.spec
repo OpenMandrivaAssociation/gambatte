@@ -14,6 +14,7 @@ BuildRequires:	scons
 BuildRequires:	qt4-devel
 BuildRequires:	SDL-devel
 BuildRequires:	libxv-devel
+BuildRequires:	libxrandr-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
 %description
