@@ -15,6 +15,7 @@ BuildRequires:	qt4-devel
 BuildRequires:	SDL-devel
 BuildRequires:	libxv-devel
 BuildRequires:	libxrandr-devel
+BuildRequires:	imagemagick
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
 %description
