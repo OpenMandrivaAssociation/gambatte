@@ -1,13 +1,11 @@
-%define		name		gambatte
-%define		version		0.5.0
-%define		subver		wip1
+%define		subver		wip2v2
 
-Name:		%{name}
-License:	GPLv2
-Group:		Emulators
-Version:	%{version}
+Name:		gambatte
+Version:	0.5.0
 Release:	%mkrel 0.%{subver}.1
 Summary:	Game Boy Color emulator with Qt and SDL frontends
+License:	GPLv2
+Group:		Emulators
 Source:		%{name}_src-%{version}-%{subver}.tar.gz
 Source1:	%{name}.png
 BuildRequires:	scons
@@ -16,7 +14,6 @@ BuildRequires:	SDL-devel
 BuildRequires:	libxv-devel
 BuildRequires:	libxrandr-devel
 BuildRequires:	imagemagick
-BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
 %description
 Gambatte is an accuracy-focused, open-source, cross-platform
@@ -44,6 +41,7 @@ cd ../gambatte_sdl
 %scons
 
 %install
+%__rm -rf %{buildroot}
 %__install -d -m 755 %{buildroot}%{_bindir}
 %__install -m 755 gambatte_qt/bin/gambatte_qt %{buildroot}%{_bindir}
 %__install -m 755 gambatte_sdl/gambatte_sdl %{buildroot}%{_bindir}
@@ -78,8 +76,10 @@ EOF
 convert %{buildroot}%{_miconsdir}/%{name}.png -resize 16x16 %{buildroot}%{_miconsdir}/%{name}.png
 convert %{buildroot}%{_iconsdir}/%{name}.png -resize 32x32 %{buildroot}%{_iconsdir}/%{name}.png
 
+%clean
+%__rm -rf %{buildroot}
+
 %files
-%defattr(-,root,root)
 %doc README changelog COPYING
 %{_bindir}/gambatte_*
 %{_mandir}/man6/*
