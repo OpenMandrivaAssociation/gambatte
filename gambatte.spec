@@ -2,12 +2,13 @@
 
 Name:		gambatte
 Version:	0.5.0
-Release:	%mkrel 0.%{subver}.1
+Release:	%mkrel 0.%{subver}.2
 Summary:	Game Boy Color emulator with Qt and SDL frontends
 License:	GPLv2
 Group:		Emulators
-Source:		%{name}_src-%{version}-%{subver}.tar.gz
+Source0:	%{name}_src-%{version}-%{subver}.tar.gz
 Source1:	%{name}.png
+Patch0:		gambatte_src-0.5.0-wip2v2-add-missing-linkage.patch
 BuildRequires:	scons
 BuildRequires:	qt4-devel
 BuildRequires:	SDL-devel
@@ -28,6 +29,7 @@ command-line SDL front-end (gambatte_sdl).
 
 %prep
 %setup -q -n %{name}_src-%{version}-%{subver}
+%patch0 -p1 -b .linkage~
 
 %build
 export CFLAGS="%{optflags}"
