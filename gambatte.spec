@@ -91,3 +91,20 @@ convert %{buildroot}%{_iconsdir}/%{name}.png -resize 32x32 %{buildroot}%{_iconsd
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
 
+
+
+%changelog
+* Fri Mar 09 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.5.0-0.wip2v2.2mdv2012.0
++ Revision: 783588
+- add missing linkage (P0)
+
+  + Andrey Bondrov <abondrov@mandriva.org>
+    - New version 0.5.0-wip2v2
+
+* Wed Sep 21 2011 Andrey Bondrov <abondrov@mandriva.org> 0.5.0-0.wip1.1
++ Revision: 700725
+- imported package gambatte
+
+
+* Wed Sep 21 2011 Andrey Bondrov <bondrov@math.dvgu.ru> 0.5.0-0.wip1.1mdv2010.2
+- Initial build for Mandriva
