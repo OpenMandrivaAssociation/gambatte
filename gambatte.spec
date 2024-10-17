@@ -6,7 +6,7 @@ Version:	0.5.0
 Release:	1.%{subver}.1
 License:	GPLv2+
 Group:		Emulators
-Url:		http://sourceforge.net/projects/gambatte/
+Url:		https://sourceforge.net/projects/gambatte/
 Source0:	%{name}_src-%{subver}.tar.gz
 Source1:	%{name}.png
 BuildRequires:	imagemagick
