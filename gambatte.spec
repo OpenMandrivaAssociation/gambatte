@@ -9,6 +9,7 @@ Group:		Emulators
 Url:		https://sourceforge.net/projects/gambatte/
 Source0:	%{name}_src-%{subver}.tar.gz
 Source1:	%{name}.png
+BuildRequires:	make
 BuildRequires:	imagemagick
 BuildRequires:	scons
 BuildRequires:	qt4-devel
